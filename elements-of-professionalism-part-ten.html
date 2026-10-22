@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Elements of Professionalism, Part Ten: Document Everything | Verandah Properties</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#008C82; --teal-wash:#E8F4F2; --gold:#C9A227; --gold-wash:#FBF5E3;
+  --ink:#1F1F1F; --ink-strong:#0F0F0F; --muted:#5A5651;
+  --paper:#FFFFFF; --page:#F4F5F4; --line:#DCDFDD; --charcoal:#1A1A1A;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --teal:#2BB3A8; --teal-wash:#12302D; --gold:#D9B74A; --gold-wash:#2E2814;
+    --ink:#E6E4E0; --ink-strong:#FFFFFF; --muted:#A8A39C;
+    --paper:#1B1D1C; --page:#121413; --line:#333836; --charcoal:#0C0D0D;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --teal:#2BB3A8; --teal-wash:#12302D; --gold:#D9B74A; --gold-wash:#2E2814;
+  --ink:#E6E4E0; --ink-strong:#FFFFFF; --muted:#A8A39C;
+  --paper:#1B1D1C; --page:#121413; --line:#333836; --charcoal:#0C0D0D;
+  color-scheme: dark;
+}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--page);color:var(--ink);font-family:'Jost',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;font-weight:400;font-size:17px;line-height:1.7}
+.wrap{max-width:680px;margin:0 auto;background:var(--paper)}
+.mast{background:var(--charcoal);color:#D8D6D2;padding:20px 40px;display:flex;align-items:center;gap:12px;border-bottom:3px solid #008C82;font-size:15px;letter-spacing:.03em}
+.mono{width:36px;height:36px;border-radius:50%;background:#008C82;display:grid;place-items:center;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:22px;font-weight:600;color:#fff;flex:none}
+.body{padding:44px 40px 36px}
+.series{color:var(--teal);font-weight:500;font-size:15px;margin-bottom:6px}
+h1{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:clamp(38px,7vw,52px);font-weight:600;line-height:1.08;color:var(--ink-strong);margin:0 0 10px}
+.date{color:var(--muted);font-size:15px;margin-bottom:34px}
+h2{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:30px;font-weight:600;color:var(--ink-strong);line-height:1.15;margin:38px 0 12px}
+p{margin:0 0 18px}
+b,strong{font-weight:600;color:var(--ink-strong)}
+.lead{font-size:19px}
+.quote{margin:30px 0;padding:22px 26px;border-left:3px solid var(--gold);background:var(--gold-wash);border-radius:0 12px 12px 0;font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;line-height:1.3;color:var(--ink-strong);font-style:italic}
+ul{padding-left:22px;margin:0 0 20px}
+li{margin-bottom:10px}
+.check{margin:26px 0 30px;border:1px solid var(--teal);border-radius:14px;overflow:hidden}
+.check-h{background:#008C82;color:#fff;padding:13px 22px;font-weight:500;font-size:15.5px}
+.check ol{margin:0;padding:20px 22px 8px 44px;background:var(--teal-wash)}
+.check li{margin-bottom:12px}
+.sign{margin-top:34px}
+.sign .name{font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;font-weight:600;color:var(--ink-strong);line-height:1.1}
+.sign .role{color:var(--muted);font-size:15px}
+footer{background:var(--charcoal);color:#CFCBC5;padding:24px 40px 28px;font-size:14px;line-height:1.6;border-top:3px solid #008C82}
+footer .tag{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:20px;color:#E3C35C;margin-bottom:6px}
+@media (max-width:560px){.body{padding:34px 22px 28px}.mast,footer{padding-left:22px;padding-right:22px}}
+.ex{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0 26px}
+.exc{border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-size:15.5px;line-height:1.55}
+.exc .t{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
+.exc.bad .t{color:#9A3B2E}.exc.good{border-color:var(--teal);background:var(--teal-wash)}.exc.good .t{color:var(--teal)}
+@media (max-width:560px){.ex{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="mast"><div class="mono">V</div>Verandah Properties, LLC</div>
+
+<div class="body">
+  <div class="series">The Elements of Professionalism · Part Ten</div>
+  <h1>Document Everything</h1>
+  <div class="date">Friday, October 23, 2026</div>
+
+  <p class="lead">Hi Team,</p>
+  <p class="lead">You have heard the saying that the devil is in the details. In property management, that is literally true. Most of the problems that cost us time, money or an owner's trust do not start with a big mistake. They start with a small detail nobody wrote down.</p>
+  <p>So this week's message is simple: <b>document everything.</b> And when it feels like overkill, it is not.</p>
+
+  <div class="quote">If it is not written down, we cannot prove it happened.</div>
+
+  <h2>Why it matters so much in our business</h2>
+  <p>In most jobs, a forgotten detail is an inconvenience. In ours, it can decide the outcome of a dispute months or even years later. Think about where our notes end up:</p>
+  <ul>
+    <li><b>A security deposit dispute</b>, where the resident remembers the condition of the property one way and the owner remembers it another.</li>
+    <li><b>An owner asking why a repair was done</b>, and whether they approved it.</li>
+    <li><b>An insurance claim</b>, where the adjuster wants to know when the problem was first reported and what was done about it.</li>
+    <li><b>An eviction or a court case</b>, where a judge only looks at what is on paper.</li>
+  </ul>
+  <p>In every one of these, the person who has the clearest record usually wins. Memories fade, and two honest people can remember the same phone call very differently. A dated note does not change its story.</p>
+
+  <h2>It also protects each other</h2>
+  <p>Documentation is not only for disputes. It is how we hand work to each other. People get sick, take vacation, and move into new roles. When someone has to pick up a file they have never seen, the notes are all they have.</p>
+  <p>If the history lives only in your head, nobody else can help that owner or resident when you are out. A good note means the next person can step in without calling you, and without the owner having to explain everything again.</p>
+
+  <h2>What a good note looks like</h2>
+  <p>A good note answers five questions: <b>who</b>, <b>what</b>, <b>when</b>, <b>how</b> it was communicated, and <b>what happens next</b>.</p>
+  <div class="ex">
+    <div class="exc bad"><div class="t">Not enough</div>Called owner about the leak. He's ok with it.</div>
+    <div class="exc good"><div class="t">Complete</div>Oct 21, 2:15 PM. Called owner on his cell about the kitchen sink leak reported by the resident on Oct 20. Shared the vendor's $285 quote. Owner approved by phone and confirmed by email at 2:40 PM. Vendor scheduled for Oct 22, 9–11 AM. Resident notified by text.</div>
+  </div>
+  <p>The first note tells us almost nothing six months from now. Which leak? Okay with what? Did he approve a dollar amount? The second note answers every question before anyone has to ask.</p>
+
+  <h2>When it feels like overkill, it is not</h2>
+  <p>Some of the things worth writing down will feel too small to bother with:</p>
+  <ul>
+    <li>A resident mentioning a "small" drip or a smell in passing.</li>
+    <li>A vendor arriving late or leaving without finishing.</li>
+    <li>An owner saying "just handle it" on the phone. Get the decision in writing.</li>
+    <li>A conversation where someone was upset, even if it ended well.</li>
+    <li>The exact date and way a notice or document was delivered.</li>
+    <li>Anything you noticed while reviewing move-in or move-out photos.</li>
+  </ul>
+  <p>Writing a note takes a minute or two. Rebuilding what happened from memory, emails and texts can take hours, and sometimes it cannot be done at all. The minute is always worth it.</p>
+
+  <div class="check">
+    <div class="check-h">This week's test</div>
+    <ol>
+      <li><b>Before you close any task or end any call, ask yourself:</b> if someone who has never seen this file picked it up tomorrow, would they know exactly what happened and what comes next?</li>
+      <li><b>If the answer is no</b>, add the note now, while the details are fresh.</li>
+    </ol>
+  </div>
+
+  <p>The details are where our work is either protected or exposed. Thank you for taking the extra minute. It matters more than it may seem.</p>
+
+  <div class="sign">
+    <div class="name">Pamela Syvertson</div>
+    <div class="role">Owner &amp; Broker, Verandah Properties, LLC</div>
+  </div>
+</div>
+
+<footer>
+  <div class="tag">The marriage, not the sprint.</div>
+  Verandah Properties, LLC · License CQ1048619 · 407-855-0331
+</footer>
+
+</div>
+</body>
+</html>
